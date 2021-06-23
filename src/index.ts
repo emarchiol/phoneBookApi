@@ -8,7 +8,7 @@ app.use(express.json());
 
 const serverPort: number = 8081;
 
-app.get("/phoneBook", list);
+app.get("/contacts", list);
 
 const server = app.listen(serverPort, "127.0.0.1", function () {
     const host: string = (server.address() as AddressInfo).address;
