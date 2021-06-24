@@ -1,6 +1,6 @@
 import express from "express";
 import { AddressInfo } from "net";
-import { list } from "./routes/phoneBook";
+import { list, addOrUpdate, deleteById } from "./routes/phoneBook";
 
 const app = express();
 app.use(express.urlencoded({extended: true})); 
@@ -9,6 +9,9 @@ app.use(express.json());
 const serverPort: number = 8081;
 
 app.get("/contacts", list);
+app.post("/contacts", addOrUpdate);
+app.post("/contacts/:id", addOrUpdate);
+app.delete("/contacts/:id", deleteById);
 
 const server = app.listen(serverPort, "127.0.0.1", function () {
     const host: string = (server.address() as AddressInfo).address;
