@@ -5,8 +5,7 @@ import { getAllContacts, deleteContactById, addOrUpdateContact } from "../sql/co
 export async function list(req: any, res: any): Promise<any[]> {
     try {
         const contacts: Contact[] = await getAllContacts();
-        return contacts ? res.status(200).json(contacts) : 
-        res.status(404).json({error: "data not found"});
+        return res.status(200).json(contacts);
     }
     catch(err) {
         return res.status(500).json({error: "Error while retrieving data"});

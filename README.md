@@ -23,6 +23,7 @@
 
 ### Point out anything you might do differently if you had more time.
 - Besides adding what is missing: auth and pagination, I would have changed the index to add contacts endpoints into a separated file, added more types that are missing around and some better error management for the existing queries/requests.
+- Add a proper logging for request/db errors.
 
 ### Your contact details and any public profiles on developer networks like GitHub, BitBucket, Stack Overflow, etc.
 - [Github account](https://github.com/emarchiol)
